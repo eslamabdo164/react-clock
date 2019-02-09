@@ -1,0 +1,18 @@
+
+/* Align Clock */
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translatex(-50%) translateY(-50%);
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+    font-size: 60px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 10px;
+
+    }
+p {
+    margin: 0 ;
+    padding : 0
+}
