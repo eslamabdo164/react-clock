@@ -5,7 +5,7 @@ class clock extends React.Component {
         super(); 
         this.state = {
             time : "00 : 00 : 00",
-            amPm : 'am'
+            amPm : 'pm'
         }
     }
     componentDidMount() {
@@ -21,8 +21,7 @@ class clock extends React.Component {
                m = addZero(d.getMinutes());
                s = addZero(d.getSeconds());
                t = `${h} : ${m} : ${s}`;
-               amPm = d.getHours > 12 ? 'pm' : 'am' ;
-
+               amPm = d.getHours() > 12 ? 'pm' : 'am' ;
                this.setState({
                    time : t , 
                    amPm: amPm
@@ -32,7 +31,8 @@ class clock extends React.Component {
         render(){
         return (
            <div className='container'>
-                <p className='clock'>{this.state.time}</p>
+                <p className='clock'>{this.state.time} {this.state.amPm} </p> 
+               
            </div>
         )
     }
